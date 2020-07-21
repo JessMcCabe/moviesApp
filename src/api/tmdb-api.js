@@ -29,3 +29,12 @@ export const getMovieReviews = id => {
     .then(res => res.json())
     .then(json => json.results);
 };
+
+//Adding Credits of a Movie - API Call to retreive credits
+export const getMovieCredits = id => {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}`
+  )
+    .then(res => res.json())
+    .then(json => json.cast);
+};
