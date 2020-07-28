@@ -12,6 +12,8 @@ import { MemoryRouter } from "react-router";
 import GenresContextProvider from "../src/contexts/genresContext";
 import { action } from "@storybook/addon-actions";
 import CastCard from "../src/components/castCard";
+import CastHeader from "../src/components/headerCast";
+import CastDetails from "../src/components/castDetails";
 
 const sample = {
   adult: false,
@@ -193,3 +195,15 @@ storiesOf("Movie Details Page/MovieHeader", module)
     const sampleNoPoster = { ...castSample, profile_path: undefined };
     return <CastCard cast={sampleNoPoster} />;
   });
+
+  storiesOf("Cast Page/CastHeader", module)
+  .addDecorator(story => (
+    <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+  ))
+  .add("default", () => <CastHeader cast={castSample} />);
+
+
+  storiesOf("Cast Page/CastDetails", module).add("default", () => (
+    <CastDetails cast={castSample} />
+  ));
+
