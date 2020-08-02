@@ -37,7 +37,7 @@ const CastPage = props => {
           </div>
           <div className="row">
           <div className="col-12 ">
-            {!props.history.location.pathname.endsWith("/cast") ? (
+            {!props.history.location.pathname.endsWith("/movie_credits") ? (
               <Link
                 className="btn btn-primary btn-block active"
                 to={`/cast/${id}/movie_credits`}

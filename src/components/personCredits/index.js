@@ -17,7 +17,7 @@ export default ({ cast }) => {
       <thead>
         <tr>
           <th scope="col">Character</th>
-          <th scope="col">Title</th>
+          <th scope="col">Film Title</th>
         </tr>
       </thead>
       <tbody>
