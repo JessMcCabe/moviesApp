@@ -24,7 +24,20 @@ export default ({ movie }) => {
             return (
               <tr key={r.id}>
                 <td>{r.character}</td>
-                <td>{r.name}</td>
+                <td>
+                {" "}
+                  <Link
+                    to={{
+                      pathname: `/cast/${r.id}`,
+                      state: {
+                        cast: r,
+                        name : movie
+                      }
+                    }}
+                    >
+                      {r.name}
+                      </Link>
+                      </td>
               </tr>
             );
           })}

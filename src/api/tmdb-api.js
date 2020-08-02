@@ -38,3 +38,13 @@ export const getMovieCredits = id => {
     .then(res => res.json())
     .then(json => json.cast);
 };
+
+
+//Adding Cast Member Details - API Call to retreive Person
+export const getCastMember = id => {
+  return fetch(
+    `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+  )
+    .then(res => res.json())
+    .then(json => json.castMember);
+};
