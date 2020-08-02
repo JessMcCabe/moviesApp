@@ -8,10 +8,7 @@ const CastPage = props => {
   const { id } = props.match.params;
   const [cast, setCast] = useState(null);
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
-    ).then(res => res.json())    
-    .then(cast => {
+    getCastMember(id).then(cast => {
       setCast(cast);
     });
   }, [id]);
