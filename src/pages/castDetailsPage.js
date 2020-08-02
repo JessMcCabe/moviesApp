@@ -1,7 +1,8 @@
 import React, {useState, useEffect}  from "react";
 import CastHeader from "../components/headerCast";
 import CastDetails from "../components/castDetails";
-import "./moviePage.css";
+import "./castPage.css";
+import { getCastMember } from "../api/tmdb-api";
 
 const CastPage = props => {
   const { id } = props.match.params;
