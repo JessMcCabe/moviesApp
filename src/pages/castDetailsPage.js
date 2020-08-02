@@ -3,6 +3,8 @@ import CastHeader from "../components/headerCast";
 import CastDetails from "../components/castDetails";
 import "./castPage.css";
 import { getCastMember } from "../api/tmdb-api";
+import { Link, Route, withRouter } from "react-router-dom";
+import PersonCredits from "../components/personCredits";
 
 const CastPage = props => {
   const { id } = props.match.params;
@@ -33,7 +35,30 @@ const CastPage = props => {
               <CastDetails cast={cast} />
             </div>
           </div>
-        </>
+          <div className="row">
+          <div className="col-12 ">
+            {!props.history.location.pathname.endsWith("/movie_credits") ? (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/cast/${id}/movie_credits`}
+              >
+                Show Movie Credits 
+              </Link>
+            ) : (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/cast/${id}`}
+              >
+                Hide Movie Credits
+              </Link>
+            )}
+          </div>
+        </div>
+        <Route
+          path={`/cast/:id/movie_credits`}
+          render={props => <PersonCredits cast={cast} {...props} />}
+        />
+      </>
         ) : (
         <p>Waiting for cast details</p>
       )}
