@@ -46,3 +46,12 @@ export const getCastMember = id => {
     `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
     ).then(res => res.json());
 };
+
+//Adding Person Movie Details - API Call to retreive Person Movie Credit Details
+export const getPersonMovieCredits= id => {
+  return fetch(
+    `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${process.env.REACT_APP_TMDB_KEY}`
+    )
+    .then(res => res.json())
+    .then(json => json.cast);
+};
