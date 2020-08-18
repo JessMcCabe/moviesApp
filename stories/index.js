@@ -14,6 +14,7 @@ import { action } from "@storybook/addon-actions";
 import CastCard from "../src/components/castCard";
 import CastHeader from "../src/components/headerCast";
 import CastDetails from "../src/components/castDetails";
+import PersonCredits from "../src/components/personCredits";
 
 const sample = {
   adult: false,
@@ -128,6 +129,79 @@ const castSample =
   homepage: null
   };
 
+  const creditSample = 
+  {
+    cast: [
+      {
+      character: "Cinque",
+      credit_id: "52fe448e9251416c75038f4b",
+      release_date: "1997-12-03",
+      vote_count: 802,
+      video: false,
+      adult: false,
+      vote_average: 7,
+      title: "Amistad",
+      genre_ids: [
+      18,
+      36,
+      9648
+      ],
+      original_language: "en",
+      original_title: "Amistad",
+      popularity: 3.06,
+      id: 11831,
+      backdrop_path: "/2lI5rNJeYHShg9okpEXSFzQZqWj.jpg",
+      overview: "In 1839, the slave ship Amistad set sail from Cuba to America. During the long trip, Cinque leads the slaves in an unprecedented uprising. They are then held prisoner in Connecticut, and their release becomes the subject of heated debate. Freed slave Theodore Joadson wants Cinque and the others exonerated and recruits property lawyer Roger Baldwin to help his case. Eventually, John Quincy Adams also becomes an ally.",
+      poster_path: "/zT5z9icgcXdaeHPgSHOjtrnPFa9.jpg"
+      },
+      {
+      character: "Narrator (U.S. Version)",
+      credit_id: "52fe4c44c3a36847f8225e6f",
+      release_date: "2000-09-09",
+      vote_count: 1,
+      video: false,
+      adult: false,
+      vote_average: 5,
+      title: "The Middle Passage",
+      genre_ids: [ ],
+      original_language: "fr",
+      original_title: "Passage du milieu",
+      popularity: 1.23,
+      id: 161407,
+      backdrop_path: null,
+      overview: "A realistic look at the horrors of the slave trade, told entirely through the voice of a dead African slave whose spirit haunts the ocean route",
+      poster_path: null
+      }
+    ],
+    crew: [
+      {
+      id: 57585,
+      department: "Production",
+      original_language: "en",
+      original_title: "Elephant White",
+      job: "Producer",
+      overview: "An assassin is hired by a businessman to avenge the murder of his daughter by white slave traders in Thailand.",
+      vote_count: 130,
+      video: false,
+      poster_path: "/hqriJWWisRhm5XapyuB40D1jqqA.jpg",
+      backdrop_path: "/hj9WFLJyrtsgIrkMSiJCH729gi6.jpg",
+      title: "Elephant White",
+      popularity: 9.604,
+      genre_ids: [
+      28,
+      80,
+      14,
+      53
+      ],
+      vote_average: 5,
+      adult: false,
+      release_date: "2011-05-17",
+      credit_id: "54e757fcc3a3685b000016e9"
+      }
+    ],
+    id: 938
+    };
+
 storiesOf("Home Page/MovieCard", module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
@@ -205,5 +279,9 @@ storiesOf("Movie Details Page/MovieHeader", module)
 
   storiesOf("Cast Page/CastDetails", module).add("default", () => (
     <CastDetails cast={castSample} />
+  ));
+
+  storiesOf("Cast Page/CastMovieCredits", module).add("default", () => (
+    <PersonCredits credits={creditSample} />
   ));
 
