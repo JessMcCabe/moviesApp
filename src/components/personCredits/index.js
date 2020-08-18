@@ -11,7 +11,7 @@ export default ({ cast }) => {
     getPersonMovieCredits(cast.id).then(credits => {
       setCredits(credits);
     });
-  }, []);
+  });
   return (
     <table className="table table-striped table-bordered table-hover">
       <thead>

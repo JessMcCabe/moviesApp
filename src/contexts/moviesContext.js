@@ -13,7 +13,6 @@ const reducer = (state, action) => {
     case "load-movies":
       return { movies: [...action.payload.movies], favorites: [] };
     case "add-review":
-      case "add-review":
       return {
         movies: [...state.movies],
         favorites: [
@@ -21,7 +20,7 @@ const reducer = (state, action) => {
           { ...action.payload.movie, review: action.payload.review },
         ],
       };
-      break;
+
     default:
       return state;
   }

@@ -3,7 +3,7 @@ import CastHeader from "../components/headerCast";
 import CastDetails from "../components/castDetails";
 import "./castPage.css";
 import { getCastMember } from "../api/tmdb-api";
-import { Link, Route, withRouter } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import PersonCredits from "../components/personCredits";
 
 const CastPage = props => {

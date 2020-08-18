@@ -282,6 +282,6 @@ storiesOf("Movie Details Page/MovieHeader", module)
   ));
 
   storiesOf("Cast Page/CastMovieCredits", module).add("default", () => (
-    <PersonCredits credits={creditSample} />
+    <PersonCredits cast={creditSample} />
   ));
 

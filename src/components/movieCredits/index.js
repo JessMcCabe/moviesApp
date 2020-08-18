@@ -10,7 +10,7 @@ export default ({ movie }) => {
     getMovieCredits(movie.id).then(credits => {
       setCredits(credits);
     });
-  }, []);
+  });
   return (
     <table className="table table-striped table-bordered table-hover">
       <thead>
