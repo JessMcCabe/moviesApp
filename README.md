@@ -188,15 +188,24 @@ profile_path: "/dhv9f3AaozOjpvjAwVzOWlmmT2V.jpg"
 Stories relating to new/modified components 
 
 
-![][stories]
+![](/storybook.png)
 
 ### UI Design.
 New/modified views
 
+>Shows detailed information on a cast member. Clicking the 'Show Movie Credits' button will display movie credits from the cast member.
+![](/CastDetailsPage_ShowMovieCreditButton.PNG)
 
-![][view]
+>Shows expanded view of the cast members movie credits.
+![](/CastDetailsPage_ShowMovieCreditExpanded_HideMovieCreditButton.PNG)
 
->Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
+>Button to Show the Credits of the movie.
+![](ShowCreditsOnMoviePage.PNG)
+
+>Expanded List of Credits with Clickable Name to navigate to the cast members details page.
+![](/ShowCreditsOnMoviePage_Expanded_ShowingHideCreditButton.PNG)
+
+
 
 ### Routing.
 
@@ -211,8 +220,6 @@ Routes supported
 
 ## React feature set.
 
-..... Insert a bullet-point list of the React features used in your project, including one source code file references for each - see examples below ......
-
 + useState and useEffect hooks - src/components/movieCredits/index.js
 + useContext hook - src/components/buttons/addToFavourites.js
 + Extended Link - src/components/personCredits/index.js
@@ -221,10 +228,10 @@ Routes supported
 
 ## Independent learning.
 
-LinkedIn Learning - React.js -- Add in Link to Certs after
-Delpoy to Zeit - link to site
+LinkedIn Learning - React.js http://www.linkedin.com/learning/paths/become-a-react-developer?trk=flagship-lil_details_certification
+>Button to Show the Credits of the movie.
+![](/BecomeAReactDeveloper.PNG)
+
+Delpoy to Zeit - https://movies-app-seven.vercel.app/
 
 
-[model]: ./data.jpg
-[view]: ./view.png
-[stories]: ./storybook.png
