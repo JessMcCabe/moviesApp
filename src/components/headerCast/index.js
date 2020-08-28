@@ -2,12 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../globals/fontawesome";
 
-const MovieHeader = ({ movie }) => {
+const CastHeader = ({ cast }) => {
   return (
     <div className="row">
       <div className="col-6 offset-3">
         <h2>
-          {movie.title}
+          {cast.name}
           {"  "}
           <a href={"/"}>
             <FontAwesomeIcon icon={["fas", "home"]} size="1x" />
@@ -18,4 +18,4 @@ const MovieHeader = ({ movie }) => {
   );
 };
 
-export default MovieHeader;
+export default CastHeader;
